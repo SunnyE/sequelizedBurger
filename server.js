@@ -3,9 +3,12 @@ var expressHndlebars = require('express-handlebars');
 var bodyParser = require('body-parser');
 var express = require('express');
 var mysql = require('mysql');
+var models = require('./models');
 
 var app = express();
 var routes = require('./controllers/burgers_controllers.js');
+
+models.sequelize.sync();
 
 app.use(express.static(__dirname + '/public'));
 

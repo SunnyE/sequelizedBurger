@@ -1,12 +1,13 @@
 <div>
 	<div class='col-md-12'>
-		<div id="makeBurger">
+		<div id="createBurger">
 			<form class="form-inline" method='POST' action='/create'>
 				<div class="form-group">
-					<label for="burgerName">Burger Name</label>
+                    <h2>burger Creation station!!!!</h2>
+					<label for="burgerName">Name thy Burger</label>
 					<input type="text" class="form-control" name='burger_name' id="burgerName" placeholder="Baconator">
 				</div>
-				<button type="submit" class="btn btn-default">Make-Da-Burger</button>
+				<button type="submit" class="btn btn-default"> Send it to the Cook!!!</button>
 			</form>
 		</div>
 	</div>
@@ -17,7 +18,7 @@
 		<div class="burgers">
 			<h2>Available Burgers</h2>
 			{{#each new}}
-				<div class='burgerDivs'>
+				<div class='burgerholders'>
 					<form method="POST" action="/devoured/{{id}}">
 						<p>{{burger_name}}</p>
 						<input type="hidden" name="id" value="{{id}}">
@@ -32,7 +33,7 @@
 		<div class="burgers">
 			<h2>Devoured Burgers</h2>
 			{{#each devoured}}
-				<div class='burgerDivs'>
+				<div class='burgerholders'>
 					<p>{{burger_name}}</p>
 				</div>
 			{{/each}}
